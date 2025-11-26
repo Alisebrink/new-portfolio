@@ -1,24 +1,38 @@
 [
   {
-    "title": "Project Todos",
-    "description":
-      "En React-app med Redux där användaren kan lägga till, checka av och ta bort todos.",
+    "title": "Gissa numret",
+    "description": "Ett enkelt spel skapat med Vanilla JS där användaren gissar vilket det hemliga numret är mellan 1-20.",
+    "imageSrc": "/images/gissa-numret.png",
+    "imageAlt": "Gissa numret",
+    "url": "https://isebrink-guess-my-number-vanilla-js.netlify.app/",
+    "tags": ["Vanilla JS", "CSS"]
+  },
+  {
+    "title": "Grisspelet",
+    "description": "Ett tärningsspel där man sparar tärningar och försöker vinna över sin motståndare.",
+    "imageSrc": "/images/grisspelet.png",
+    "imageAlt": "Grisspelet",
+    "url": "https://alisebrink-react-todolist.netlify.app/",
+    "tags": ["Vanilla JS", "CSS"]
+  },
+  {
+    "title": "Att göra App",
+    "description": "En React-app med Redux där användaren kan lägga till, checka av och ta bort todos.",
     "imageSrc": "/images/todo-project.jpg",
-    "imageAlt": "To-do projekt",
+    "imageAlt": "Grisspelet",
     "url": "https://alisebrink-react-todolist.netlify.app/",
     "tags": ["React", "Redux", "CSS"]
   },
   {
-    "title": "Project Guess Who",
-    "description":
-      "Ett spel där användaren får gissa karaktärer. Byggt med React, HTML och CSS.",
+    "title": "Gissa vem? (varning för ljud)",
+    "description": "Ett spel där användaren får gissa karaktärer. Byggt med React, HTML och CSS.",
     "imageSrc": "/images/guess-who.jpg",
     "imageAlt": "Guess Who projekt",
     "url": "https://alisebrink-project05-guess-who.netlify.app/",
     "tags": ["React", "JavaScript", "CSS"]
   },
   {
-    "title": "Rock, Paper, Scissor, Lizard, Spock",
+    "title": "Sten, sax, påse + extra",
     "description": "Ett spel byggt i Vue där användaren tävlar mot datorn.",
     "imageSrc": "/images/rock-paper-scissor.png",
     "imageAlt": "Rock Paper Scissor Lizard Spock projekt",
@@ -26,9 +40,8 @@
     "tags": ["Vue", "JavaScript", "HTML", "CSS"]
   },
   {
-    "title": "Movies App",
-    "description":
-      "En filmapp i React där användaren kan söka efter titlar via ett API.",
+    "title": "Film app",
+    "description": "En filmapp i React där användaren kan söka efter titlar via ett API.",
     "imageSrc": "/images/project-movie.jpg",
     "imageAlt": "Movies app projekt",
     "url": "https://elastic-raman-da9269.netlify.app/",
