@@ -1,0 +1,25 @@
+.scroll-progress-bar {
+  position: fixed;
+  top: 49px;
+  left: 0;
+  height: 5px;
+  width: 0;
+  overflow: hidden;
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+}
+
+
+.scroll-progress-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+
+  background: #d53369;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #cbad6d, #d53369);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #cbad6d, #d53369); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}

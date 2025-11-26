@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Project React Survey",
+    "url": "https://alisebrink-survey-react.netlify.app/",
+    "description": "En enkätapp byggd med React, props och state.",
+    "tags": ["React", "JavaScript", "JSX", "CSS"]
+  },
+  {
+    "title": "Project Music Releases",
+    "url": "https://project-music-albums.netlify.app/",
+    "description": "App som hämtar och visar musiksläpp via Spotify API.",
+    "tags": ["JavaScript", "HTML", "API", "CSS"]
+  },
+  {
+    "title": "Project GitHub Tracker",
+    "url": "https://alisebrink-project-github-tracker.netlify.app/",
+    "description": "En sida som visar data från mitt GitHub-konto.",
+    "tags": ["JavaScript", "HTML", "CSS", "API"]
+  },
+  {
+    "title": "Project Business Site",
+    "url": "https://alisebrink-project02-business-site.netlify.app/",
+    "description": "Fiktiv e-handelssida för bröllopsblommor.",
+    "tags": ["HTML", "PHP", "CSS", "Photoshop"]
+  },
+  {
+    "title": "Project E-commerce Store",
+    "url": "https://alisebrink-project-e-commerce.netlify.app/",
+    "description": "Fiktiv tech-ehandel med fokus på layout och struktur.",
+    "tags": ["HTML", "CSS", "Photoshop"]
+  },
+  {
+    "title": "Project News Site",
+    "url": "https://alisebrink-project01-the-news-site.netlify.app/",
+    "description": "Nyhetssajt byggd med grid och flexbox.",
+    "tags": ["HTML", "CSS"]
+  },
+  {
+    "title": "Project Chatbot",
+    "url": "https://alisebrink-project03-chatbot.netlify.app/",
+    "description": "En enkel chatbot framtagen i parprogrammering.",
+    "tags": ["JavaScript", "CSS"]
+  },
+  {
+    "title": "Project Weather Application",
+    "url": "https://alisebrink-project05-weather-app.netlify.app/",
+    "description": "Väderapp byggd med mobprogrammering.",
+    "tags": ["JavaScript", "HTML", "CSS", "Mob programming"]
+  },
+  {
+    "title": "Project API Fetching",
+    "url": "https://github.com/Alisebrink/project-arbetsformedlingen-api/blob/main/js/main.js",
+    "description": "Sida som hämtar data från ett legacy-API.",
+    "tags": ["JavaScript"]
+  },
+  {
+    "title": "Pingstkyrkan Leksand",
+    "url": "https://www.leksandpingst.se/",
+    "description": "Webbsida byggd i Wix åt en lokal församling.",
+    "tags": ["Photoshop", "Layout", "Wix"]
+  }
+]
