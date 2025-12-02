@@ -12,7 +12,7 @@
     "description": "Ett tärningsspel där man sparar tärningar och försöker vinna över sin motståndare.",
     "imageSrc": "/images/grisspelet.png",
     "imageAlt": "Grisspelet",
-    "url": "https://alisebrink-react-todolist.netlify.app/",
+    "url": "https://isebrink-pig-game-vanilla-js.netlify.app/",
     "tags": ["Vanilla JS", "CSS"]
   },
   {
