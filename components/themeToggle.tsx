@@ -1,65 +1,44 @@
-"use client";
+﻿"use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const switchRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    const stored = localStorage.getItem("theme") as "light" | "dark" | null;
-
-    if (stored) {
-      setTheme(stored);
-      document.documentElement.classList.toggle("dark", stored === "dark");
-    } else {
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const initial = prefersDark ? "dark" : "light";
-      setTheme(initial);
-      document.documentElement.classList.toggle("dark", initial === "dark");
-    }
+    const isDark = document.documentElement.dataset.theme !== "light";
+    switchRef.current?.setAttribute("aria-checked", String(isDark));
   }, []);
 
-  const toggleTheme = () => {
-    const next = theme === "dark" ? "light" : "dark";
-    setTheme(next);
-    document.documentElement.classList.toggle("dark", next === "dark");
-    localStorage.setItem("theme", next);
-  };
+  function toggleTheme() {
+    const root = document.documentElement;
+    const next = root.dataset.theme === "light" ? "dark" : "light";
+    root.dataset.theme = next;
+    switchRef.current?.setAttribute("aria-checked", String(next === "dark"));
+
+    try {
+      localStorage.setItem("theme", next);
+    } catch {
+      // The current page can still switch themes if storage is unavailable.
+    }
+  }
 
   return (
     <button
+      ref={switchRef}
+      type="button"
+      role="switch"
+      aria-label="Mörkt tema"
+      aria-checked={true}
       onClick={toggleTheme}
-      aria-label="Växla tema"
-      className="
-        relative w-14 h-8 
-        flex items-center 
-        rounded-full 
-        bg-slate-300 dark:bg-slate-700 
-        transition-colors
-      "
+      className="flex min-h-11 shrink-0 cursor-pointer items-center gap-1.5 rounded-full px-1.5 text-foreground"
     >
-      {/* Måne-ikon (vänster) */}
-      <span className="absolute left-2 text-slate-700 dark:text-slate-300 pointer-events-none">
-        🌙
+      <span aria-hidden="true" className="flex h-5 w-9 items-center rounded-full border border-control bg-action px-0.5 light:bg-surface">
+        <span className="size-3.5 translate-x-3.5 rounded-full bg-on-action motion-safe:transition-transform light:translate-x-0 light:bg-muted" />
       </span>
-
-      {/* Sol-ikon (höger) */}
-      <span className="absolute right-2 text-slate-700 dark:text-yellow-300 pointer-events-none">
-        ☀️
-      </span>
-
-      {/* Den runda glidande togglen */}
-      <span
-        className={`
-          absolute top-1 
-          w-6 h-6 
-          rounded-full 
-          bg-white dark:bg-slate-900 
-          shadow 
-          transform transition-transform
-          ${theme === "light" ? "translate-x-6" : "translate-x-0"}
-        `}
-      ></span>
+      <FaMoon aria-hidden="true" className="size-3.5 light:hidden" />
+      <FaSun aria-hidden="true" className="hidden size-3.5 light:block" />
     </button>
   );
 }

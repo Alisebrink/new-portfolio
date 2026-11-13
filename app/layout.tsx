@@ -17,13 +17,29 @@ export const metadata: Metadata = {
   description: "Linnea Isebrinks portfolio",
 };
 
+const initializeTheme = `
+  (() => {
+    let theme;
+    try {
+      theme = localStorage.getItem("theme");
+    } catch {}
+    if (theme !== "light" && theme !== "dark") {
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    document.documentElement.dataset.theme = theme;
+  })();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="sv" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: initializeTheme }} />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
